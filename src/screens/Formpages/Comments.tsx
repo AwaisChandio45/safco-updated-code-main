@@ -87,7 +87,29 @@ const Comments: () => Node = props => {
   const [userLocation, setUserCustomerLocation] = React.useState(undefined);
 
   const [toast, setToast] = React.useState({value: '', type: ''});
+
+  //old changed because of the id of the employee
+  // useEffect(() => {
+  //   let {item, id} = props.route.params;
+  //   if (item) {
+  //     setAlldataobj(item);
+  //     setValues(item);
+  //   } else {
+  //     setAlldataobj(CustomGetDataModule);
+  //   }
+  //   // alert(JSON.stringify(CustomGetDataModule?.visitType?.value))
+  //   // let get = allDataobj;
+  //   // get.addedBy.value = getUserData.UserData.FirstName + ' ' + getUserData.UserData.LastName;
+  //   // get.addedBy.error = false;
+  //   // setAlldataobj({ ...get });
+  //   setId(id);
+  //   // setValues()
+  // }, []);
+
+  
+
   useEffect(() => {
+     let isMounted = true;
     let {item, id} = props.route.params;
     if (item) {
       setAlldataobj(item);
@@ -100,10 +122,20 @@ const Comments: () => Node = props => {
     // get.addedBy.value = getUserData.UserData.FirstName + ' ' + getUserData.UserData.LastName;
     // get.addedBy.error = false;
     // setAlldataobj({ ...get });
+ 
+ 
+     if (isMounted) {
+    let currentData = item ? {...item} : {...CustomGetDataModule};
+    currentData.addedById.value = getUserData.UserData.EmployeeId || "12345";
+    setAlldataobj(currentData);
     setId(id);
+  }
     // setValues()
   }, []);
-
+ 
+ 
+ 
+ 
   const setValues = item => {
     if (getUserData.UserData.EmployeeTypeName == 'Verification Officer') {
       let get = item;
@@ -116,10 +148,12 @@ const Comments: () => Node = props => {
         value: getUserData.UserData.EmployeeTypeName,
       };
       // get["visitType"]={value :'Non-Physical Visit'};
-
+ 
+      get.addedById.value = getUserData.UserData.EmployeeId || "12345";
       setAlldataobj({...get});
     }
   };
+ 
   // ******************************* LOCATION CODE ***************************************** */
 
   const handleLocation = () => {

@@ -3,13 +3,13 @@
 // export const baseUrlTemp="http://mms.safcomicrofinance.com.pk/employees/TabDataNew/"
 
 //=================CURRENT DATABASE====================================
-export const baseUrl = 'http://119.160.107.37/employees/ReactData/';
-export const baseUrlTemp = 'http://119.160.107.37/employees/TabDataNew/';
+// export const baseUrl = 'http://119.160.107.37/employees/ReactData/';
+// export const baseUrlTemp = 'http://119.160.107.37/employees/TabDataNew/';
 
 // azaan laptop local DATABASE CONNECTION
-// export const baseUrl = 'http://172.16.28.225/safco-mis/employees/ReactData/';
-// export const baseUrlTemp =
-//   'http://172.16.28.225/safco-mis/employees/TabDataNew/';
+export const baseUrl = 'http://172.16.28.225/safco-mis/employees/ReactData/';
+export const baseUrlTemp =
+  'http://172.16.28.225/safco-mis/employees/TabDataNew/';
 
 // Saeed Iqbal laptop local DATABASE CONNECTION
 // export const baseUrl = 'http://172.16.31.7/safco-mis/employees/ReactData/';
