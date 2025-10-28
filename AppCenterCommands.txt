@@ -1,0 +1,42 @@
+appcenter codepush release-react -a akhan-vergesystems.com/Safco-E-Apprisal -d Production
+
+
+
+
+
+
+****************************************************************************** START
+ ************************ INFORMATION ABOUT APP ****************************************
+******************************************************************************
+1- All Forms data comes from RequiredArray file then set in redux 
+(if you want to add a new value in CustomGetDataModule so must remeber to put 
+same value in two places (Header file,Gurantor file) for reset values).
+
+2- Comments file, AddGroup file , CustomerSurvey forms all comes from Redux Arrays
+
+3- All Syncdown Data Load in Redux Array in Splash
+
+4- Common Error : 
+  - if (Please add customer info) means  
+  - if ( Customer not added ) error comes then its means some params is missing in api side one or more
+  extra params  sended from application side .
+  - if ( Network Error ) then server response issue.
+  - if  Nothing comes in response means apis code stop some where start die in test.
+  - if S3-Libray error comes then s3 Libray issue .
+  - Group Information is missing because you have added one more extra params 
+  - Hostname in certificate didn't match (means you need to assign dedicated ip in server)
+
+5- THIS QUERY RUN WHEN DATA IS NOT STORING IN TABLE DUE TO SIZE
+  SET GLOBAL max_allowed_packet=1073741824;
+  SHOW VARIABLES LIKE 'max_allowed_packet'; 
+
+6- BMGROUPS and BMSyncupandSyncdown both files code is updated but not in use 
+   LoanVerficaiton files doing all this functionality
+
+7- Not Success ,Try again after few minutes   
+ This message shows when Database Maximum is less or QUERY ERROR may be sending object have speacial character
+8- Failed to fetch 
+Means group memeber syncing up individualy
+******************************************************************************
+ ************************ INFORMATION ABOUT APP ****************************************
+****************************************************************************** END

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "911905601464",
+    "project_id": "safcomircofinance",
+    "storage_bucket": "safcomircofinance.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911905601464:android:d1dba1d1f6a381f077414d",
+        "android_client_info": {
+          "package_name": "com.safcomicrofinance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911905601464-erpc1vropsgchar806kes738srcqdofb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpS4wdXQJLhrMmI5yavHvlN9O04jtOLa4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911905601464-erpc1vropsgchar806kes738srcqdofb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
